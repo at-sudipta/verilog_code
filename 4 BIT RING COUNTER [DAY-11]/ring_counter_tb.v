@@ -20,26 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-//module ring_counter_tb();
-
-//reg clk,rst;
-//wire [3:0]q;
-
-//ring_counter_design dut(.clk(clk),.rst(rst),.q(q));
-
-//initial
-//begin
-//clk=0;
-//rst=1;
-//#10;
-//rst=0;
-//#10;
-//end
-//always
-//begin
-//clk=~clk;
-//end
-//endmodule
 
 module ring_counter_tb();
 	reg clk,rst;
