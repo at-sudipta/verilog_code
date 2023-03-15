@@ -1,0 +1,43 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 15.03.2023 15:14:34
+// Design Name: 
+// Module Name: ring_counter_design
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module ring_counter_design(input clk,rst,output reg [3:0]q);
+
+always@(posedge clk)
+    begin
+        if(rst)
+        q<=4'd1;
+        else
+            begin
+             case(q)
+                4'd1:q=4'd2;
+                4'd2:q=4'd4;
+                4'd4:q=4'd8;
+                4'd8:q=4'd1;
+                default:q=4'd1;
+                endcase
+                
+            end
+        
+    end
+
+endmodule
